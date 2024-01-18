@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Gabriel Sampaio Skateboarding Class</title>
+    <script>
+        function callUs() {
+        if (window.location.href == 'https://gabrielsampaiolinks.github.io/') {
+            var elementToClick = document.getElementById('call-us');
+
+            if (elementToClick) {
+                elementToClick.click();
+            }
+        }
+        };
+    </script>
 </head>
-<body>
+<body onload="callUs()">
 
     <div class="linktree">
+        <a id="call-us" href="+55 31 8399-2345">Call Us</a>
         <a href="https://example.com" target="_blank">Website</a>
         <a href="https://instagram.com/example" target="_blank">Instagram</a>
         <a href="https://twitter.com/example" target="_blank">Twitter</a>
         <!-- Add more links as needed -->
     </div>
-
 </body>
 </html>
