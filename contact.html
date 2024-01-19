@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script>
+        function callUs() {
+            const userAgent = navigator.userAgent;
+            const elementsToClick = document.querySelectorAll('.call-us');
+            
+            
+            const message = 'I%want%to%more%know%about%your%skateboarding%class!'
+            const phoneNumber = '17203057326'
+
+            if (/Android/i.test(userAgent)) {
+                elementsToClick.forEach(function(element) {
+                    element.href = `sms:+${phoneNumber}?body=${message}`
+                });
+            } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                console.log('iOS');
+                elementsToClick.forEach(function(element) {
+                    element.href = `sms:+${phoneNumber}&body=${message}`
+                });
+            } else {
+                console.log('Unknown or not a mobile device');
+            }
+        };
+    </script>
+</head>
+<body onload="callUs()">
+    <a class="call-us android" href="#" hidden>Send SMS Android</a>
+        <a class="call-us ios" href="#" hidden>Send SMS iOS</a>
+</body>
+</html>

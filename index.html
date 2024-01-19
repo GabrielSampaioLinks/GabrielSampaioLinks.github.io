@@ -5,41 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Gabriel Sampaio Skateboarding Class</title>
-    <script>
-        function callUs() {
-            var userAgent = navigator.userAgent;
-            var elementsToClick = document.querySelectorAll('.call-us');
-
-            if (/Android/i.test(userAgent)) {
-                elementsToClick.forEach(function(element) {
-                    element.href = "sms:+17203057326?body=Hello%20there!";
-                });
-            } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
-                console.log('iOS');
-                elementsToClick.forEach(function(element) {
-                    element.href = "sms:+1234567890&body=Hello%20there!";
-                });
-            } else {
-                console.log('Unknown or not a mobile device');
-            }
-
-            if (window.location.href === 'https://gabrielsampaiolinks.github.io/') {
-                elementsToClick.forEach(function(element) {
-                    element.click();
-                });
-            }
-        };
-    </script>
 </head>
-<body onload="callUs()">
-
+<body>
+    <h1>About Gabriel Sampaio</h1>
     <div class="linktree">
-        <a class="call-us android" href="#">Send SMS Android</a>
-        <a class="call-us ios" href="#">Send SMS iOS</a>
-
-        <a href="https://example.com" target="_blank">Website</a>
-        <a href="https://instagram.com/example" target="_blank">Instagram</a>
-        <a href="https://twitter.com/example" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/gabrielsampaioskt/" target="_blank">Instagram</a>
     </div>
 </body>
 </html>
