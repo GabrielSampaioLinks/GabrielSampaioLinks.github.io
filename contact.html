@@ -16,24 +16,21 @@
             if (/Android/i.test(userAgent)) {
                 elementsToClick.forEach(function(element) {
                     element.href = `sms:+${phoneNumber}?body=${message}`
+                    element.click();
                 });
             } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
-                console.log('iOS');
                 elementsToClick.forEach(function(element) {
                     element.href = `sms:+${phoneNumber}&body=${message}`
+                    element.click();
                 });
             } else {
                 console.log('Unknown or not a mobile device');
-            }
-
-            if (window.location.href === 'https://gabrielsampaiolinks.github.io/contact') {
-                elementsToClick.click();
             }
         };
     </script>
 </head>
 <body onload="callUs()">
     <a class="call-us android" href="#" hidden>Send SMS Android</a>
-        <a class="call-us ios" href="#" hidden>Send SMS iOS</a>
+    <a class="call-us ios" href="#" hidden>Send SMS iOS</a>
 </body>
 </html>
