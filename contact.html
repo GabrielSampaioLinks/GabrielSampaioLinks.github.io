@@ -10,17 +10,19 @@
             const elementsToClick = document.querySelectorAll('.call-us');
             
             
-            const message = 'I%want%to%more%know%about%your%skateboarding%class!'
-            const phoneNumber = '17203057326'
+            const message = "I want to more know about your skateboarding class!"
+            const phoneNumber = "17203057326"
 
             if (/Android/i.test(userAgent)) {
                 elementsToClick.forEach(function(element) {
                     element.href = `sms:+${phoneNumber}?body=${message}`
+                    console.log(element.href)
                     element.click();
                 });
             } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
                 elementsToClick.forEach(function(element) {
                     element.href = `sms:+${phoneNumber}&body=${message}`
+                    console.log(element.href)
                     element.click();
                 });
             } else {
